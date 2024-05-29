@@ -37,7 +37,6 @@ public class App extends Application {
         Set<Class<?>> controllerClasses = new HashSet<>();
         try {
             controllerClasses = ClassUtils.getClasses(config.get("CONTROLLERS_PACKAGE"));
-
             for (Class<?> controllerClass : controllerClasses) {
                 if (controllerClass.getSimpleName().endsWith("Controller")) {
                     String packageName = controllerClass.getName();
@@ -47,7 +46,7 @@ public class App extends Application {
                             : packageStrings[length - 2];
                     String view = packageStrings[length - 1];
                     String hasPoint = controller.equals("") ? "" : "/";
-                    String viewName = StringUtils.decapitalize(controller + hasPoint + view.replace("Controller", ""));
+                    String viewName = StringUtils.decapitalize(controller + hasPoint + view.replace("Controller", ""));                   
                     controllerMap.put(viewName, controllerClass);
                 }
             }

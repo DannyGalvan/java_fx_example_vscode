@@ -1,6 +1,6 @@
 module com.mycompany.loan_control {
     requires transitive javafx.controls;
-    requires javafx.fxml;
+    requires transitive javafx.fxml;
     requires transitive javafx.graphics;
     requires transitive java.persistence;
     requires javafx.media;

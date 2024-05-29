@@ -3,35 +3,25 @@ package com.mycompany.loan_control.utils;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
 
 public class ClassUtils {
 
-  public static Set<Class<?>> getClasses(String packageName) throws ClassNotFoundException, IOException {
-    ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-    String path = packageName.replace('.', '/');
-    Enumeration<URL> resources = classLoader.getResources(path);
-    Set<File> dirs = new HashSet<>();
-    while (resources.hasMoreElements()) {
-      URL resource = resources.nextElement();
-      dirs.add(new File(resource.getFile()));
-    }
-    Set<Class<?>> classes = new HashSet<>();
-    for (File directory : dirs) {
-      classes.addAll(findClasses(directory, packageName));
-    }
-    return classes;
-  }
-
   private static Set<Class<?>> findClasses(File directory, String packageName) throws ClassNotFoundException {
     Set<Class<?>> classes = new HashSet<>();
+    System.out.println("directory: " + directory.toPath().toString());
+    System.out.println("existes: " + directory.exists());
     if (!directory.exists()) {
       return classes;
     }
     File[] files = directory.listFiles();
     for (File file : files) {
+      System.out.println("file: " + file.toPath().toString());
       if (file.isDirectory()) {
         assert !file.getName().contains(".");
         classes.addAll(findClasses(file, packageName + "." + file.getName()));
@@ -41,4 +31,40 @@ public class ClassUtils {
     }
     return classes;
   }
+
+  public static Set<Class<?>> getClasses(String packageName) throws ClassNotFoundException, IOException {
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        String path = packageName.replace('.', '/');
+        Enumeration<URL> resources = classLoader.getResources(path);
+        Set<Class<?>> classes = new HashSet<>();
+        while (resources.hasMoreElements()) {
+            URL resource = resources.nextElement();
+            if (resource.getProtocol().equals("jar")) {
+                classes.addAll(findClassesFromJar(resource, packageName));
+            } else {
+                classes.addAll(findClasses(new File(resource.getFile()), packageName));
+            }
+        }
+        return classes;
+    }
+
+    private static Set<Class<?>> findClassesFromJar(URL jarUrl, String packageName) throws IOException, ClassNotFoundException {
+        Set<Class<?>> classes = new HashSet<>();
+        String jarPath = jarUrl.getPath();
+        try (JarFile jarFile = new JarFile(jarPath.substring(jarPath.indexOf(':') + 1, jarPath.indexOf('!')))) {
+            Enumeration<JarEntry> entries = jarFile.entries();
+            URLClassLoader loader = new URLClassLoader(new URL[]{jarUrl});
+            while (entries.hasMoreElements()) {
+                JarEntry entry = entries.nextElement();
+                if (!entry.isDirectory() && entry.getName().endsWith(".class")) {
+                    String className = entry.getName().replace('/', '.').replace(".class", "");
+                    if (className.startsWith(packageName)) {
+                        Class<?> clazz = Class.forName(className, true, loader);
+                        classes.add(clazz);
+                    }
+                }
+            }
+        }
+        return classes;
+    }
 }
