@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21">
+   <children>
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="769.0" prefWidth="839.0" spacing="20.0">
+         <children>
+            <Pane prefHeight="744.0" prefWidth="799.0" style="-fx-background-color: #F3E3A1;">
+               <children>
+                  <Button layoutX="118.0" layoutY="542.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="226.0" style="-fx-background-color: #D7BDE2;" text="SIGN UP">
+                     <font>
+                        <Font name="Thonburi Bold" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="415.0" layoutY="541.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="226.0" style="-fx-background-color: #D7BDE2;" text="BACK TO LOGIN">
+                     <font>
+                        <Font name="Thonburi Bold" size="21.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="221.0" layoutY="161.0" text="IF YOU HAVE AN ACCOUNT, LOGIN">
+                     <font>
+                        <Font name="Thonburi Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="202.0" layoutY="247.0" text="USER">
+                     <font>
+                        <Font name="Thonburi Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="193.0" layoutY="297.0" text="NAME">
+                     <font>
+                        <Font name="Thonburi Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="279.0" layoutY="235.0" prefHeight="44.0" prefWidth="263.0">
+                     <font>
+                        <Font name="Thonburi Bold" size="21.0" />
+                     </font>
+                  </TextField>
+                  <TextField layoutX="279.0" layoutY="289.0">
+                     <font>
+                        <Font name="Thonburi Bold" size="21.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="365.0" layoutY="95.0" text="SIGN UP ">
+                     <font>
+                        <Font name="Thonburi Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="279.0" layoutY="343.0">
+                     <font>
+                        <Font name="Thonburi Bold" size="21.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="188.0" layoutY="354.0" text="PHONE">
+                     <font>
+                        <Font name="Thonburi Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="279.0" layoutY="397.0">
+                     <font>
+                        <Font name="Thonburi Bold" size="21.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="159.0" layoutY="409.0" text="ADDRESS">
+                     <font>
+                        <Font name="Thonburi Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="278.0" layoutY="451.0">
+                     <font>
+                        <Font name="Thonburi Bold" size="21.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="141.0" layoutY="459.0" text="PASSWORD">
+                     <font>
+                        <Font name="Thonburi Bold" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

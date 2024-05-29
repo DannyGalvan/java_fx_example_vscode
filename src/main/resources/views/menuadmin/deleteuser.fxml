@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21">
+   <children>
+      <Pane prefHeight="498.0" prefWidth="647.0" style="-fx-background-color: #FFF2D3;">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="622.0" style="-fx-background-color: #584B33;">
+               <items>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #FFF2D3;" text="MENU">
+                     <font>
+                        <Font name="Thonburi Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #FFF2D3;" text="MENU ADMIN">
+                     <font>
+                        <Font name="Thonburi Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </items>
+            </ToolBar>
+            <ScrollBar layoutX="621.0" orientation="VERTICAL" prefHeight="498.0" prefWidth="26.0" style="-fx-background-color: #584B33;" />
+            <Label layoutX="105.0" layoutY="201.0" text="INSERT ID">
+               <font>
+                  <Font name="Thonburi Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="145.0" layoutY="238.0" text="USER">
+               <font>
+                  <Font name="Thonburi Bold" size="19.0" />
+               </font>
+            </Label>
+            <Button layoutX="73.0" layoutY="309.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="209.0" style="-fx-background-color: #584B33;" text="DELETE USER" textFill="#fff2d3">
+               <font>
+                  <Font name="Thonburi Bold" size="19.0" />
+               </font>
+            </Button>
+            <Label layoutX="211.0" layoutY="132.0" prefHeight="44.0" prefWidth="241.0" text="DELETE USER">
+               <font>
+                  <Font name="Gurmukhi Sangam MN" size="32.0" />
+               </font>
+            </Label>
+            <Button layoutX="325.0" layoutY="309.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="209.0" style="-fx-background-color: #584B33;" text="CANCEL" textFill="#fff2d3">
+               <font>
+                  <Font name="Thonburi Bold" size="19.0" />
+               </font>
+            </Button>
+            <TextField layoutX="213.0" layoutY="198.0" prefHeight="26.0" prefWidth="241.0" style="-fx-background-color: #FFF2D3; -fx-border-color: #584B33;">
+               <font>
+                  <Font name="Thonburi Bold" size="15.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="213.0" layoutY="235.0" prefHeight="26.0" prefWidth="241.0" style="-fx-background-color: #FFF2D3; -fx-border-color: #584B33;">
+               <font>
+                  <Font name="Thonburi Bold" size="15.0" />
+               </font>
+            </TextField>
+            <Button layoutX="464.0" layoutY="198.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="86.0" style="-fx-background-color: #584B33;" text="SEARCH" textFill="#fff2d3">
+               <font>
+                  <Font name="Thonburi Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

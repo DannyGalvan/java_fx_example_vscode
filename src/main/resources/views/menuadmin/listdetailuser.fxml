@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21">
+   <children>
+      <Pane prefHeight="494.0" prefWidth="647.0" style="-fx-background-color: #FFF2D3;">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="622.0" style="-fx-background-color: #584B33;">
+               <items>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #FFF2D3;" text="MENU">
+                     <font>
+                        <Font name="Thonburi Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #FFF2D3;" text="SEARCH BOOK">
+                     <font>
+                        <Font name="Thonburi Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #FFF2D3;" text="BORROW BOOK">
+                     <font>
+                        <Font name="Thonburi Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #FFF2D3;" text="RETURN BOOK">
+                     <font>
+                        <Font name="Thonburi Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #FFF2D3;" text="HISTORY">
+                     <font>
+                        <Font name="Thonburi Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </items>
+            </ToolBar>
+            <ScrollBar layoutX="621.0" orientation="VERTICAL" prefHeight="494.0" prefWidth="26.0" style="-fx-background-color: #584B33;" />
+            <TableView layoutX="19.0" layoutY="122.0" prefHeight="346.0" prefWidth="581.0" style="-fx-background-color: #FFF2D3; -fx-border-color: #584B33;">
+               <columns>
+                  <TableColumn prefWidth="158.0" text="BOOK" />
+                  <TableColumn text="DATE" />
+                  <TableColumn prefWidth="97.0" text="RETURN DATE" />
+                  <TableColumn prefWidth="104.0" text="RETURN FEE" />
+                  <TableColumn prefWidth="139.0" text="BOOK DETAIL" />
+               </columns>
+            </TableView>
+            <Label layoutX="227.0" layoutY="66.0" prefHeight="44.0" prefWidth="168.0" text="USER LIST">
+               <font>
+                  <Font name="Gurmukhi Sangam MN" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ToolBar prefHeight="40.0" prefWidth="622.0" style="-fx-background-color: #584B33;">
+         <items>
+            <Button mnemonicParsing="false" style="-fx-background-color: #FFF2D3;" text="MENU">
+               <font>
+                  <Font name="Thonburi Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" style="-fx-background-color: #FFF2D3;" text="MENU ADMIN">
+               <font>
+                  <Font name="Thonburi Bold" size="14.0" />
+               </font>
+            </Button>
+         </items>
+      </ToolBar>
+      <ScrollBar layoutX="621.0" orientation="VERTICAL" prefHeight="494.0" prefWidth="26.0" style="-fx-background-color: #584B33;" />
+      <TableView layoutX="19.0" layoutY="122.0" prefHeight="346.0" prefWidth="581.0" style="-fx-background-color: #FFF2D3; -fx-border-color: #584B33;">
+         <columns>
+            <TableColumn prefWidth="153.0" text="NAME" />
+            <TableColumn prefWidth="189.0" text="ADDRESS" />
+            <TableColumn prefWidth="107.0" text="PHONE" />
+            <TableColumn prefWidth="130.0" text="ID NUMBER " />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

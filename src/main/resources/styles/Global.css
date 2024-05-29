@@ -1,0 +1,53 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.button-primary {
+  -fx-text-fill: #fff;
+  -fx-background-color: #007bff;
+  -fx-border-color: #007bff;
+}
+.button-primary:hover {
+  -fx-background-color: #0069d9;
+  -fx-border-color: #0062cc;
+}
+
+.button-secondary {
+  -fx-text-fill: #fff;
+  -fx-background-color: #6c757d;
+  -fx-border-color: #6c757d;
+}
+.button-secondary:hover {
+  -fx-background-color: #5a6268;
+  -fx-border-color: #545b62;
+}
+
+.button-success {
+  -fx-text-fill: #fff;
+  -fx-background-color: #28a745;
+  -fx-border-color: #28a745;
+}
+.button-success:hover {
+  -fx-background-color: #218838;
+  -fx-border-color: #1e7e34;
+}
+
+.button-danger {
+  -fx-text-fill: #fff;
+  -fx-background-color: #c9485f;
+  -fx-border-color: #c9485f;
+}
+.button-danger:hover {
+  -fx-background-color: #df5c74;
+  -fx-border-color: #df5c74;
+}
+
+.toggle-button:selected {
+  -fx-background-color: #007bff;
+  -fx-text-fill: white;
+}
+
+.toggle-button {
+  -fx-background-color: gray;
+  -fx-text-fill: black;
+}

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21">
+   <children>
+      <Pane prefHeight="499.0" prefWidth="647.0" style="-fx-background-color: #FFF2D3;">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="622.0" style="-fx-background-color: #584B33;">
+               <items>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #FFF2D3;" text="MENU">
+                     <font>
+                        <Font name="Thonburi Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #FFF2D3;" text="MENU ADMIN">
+                     <font>
+                        <Font name="Thonburi Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </items>
+            </ToolBar>
+            <ScrollBar layoutX="621.0" orientation="VERTICAL" prefHeight="498.0" prefWidth="26.0" style="-fx-background-color: #584B33;" />
+            <Label layoutX="36.0" layoutY="134.0" text="TRANSACTION ID">
+               <font>
+                  <Font name="Thonburi Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="170.0" text="BORROWED BOOK">
+               <font>
+                  <Font name="Thonburi Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="274.0" layoutY="69.0" prefHeight="44.0" prefWidth="126.0" text="STATUS">
+               <font>
+                  <Font name="Gurmukhi Sangam MN" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="246.0" text="SHARED DAYS">
+               <font>
+                  <Font name="Thonburi Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="283.0" text="SHARED DATE">
+               <font>
+                  <Font name="Thonburi Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="64.0" layoutY="321.0" text="RETURN DATE">
+               <font>
+                  <Font name="Thonburi Bold" size="19.0" />
+               </font>
+            </Label>
+            <PasswordField layoutX="212.0" layoutY="318.0" prefHeight="30.0" prefWidth="241.0" style="-fx-background-color: #FFF2D3; -fx-border-color: #584B33;">
+               <font>
+                  <Font name="Thonburi Bold" size="15.0" />
+               </font>
+            </PasswordField>
+            <TextField layoutX="212.0" layoutY="130.0" prefHeight="26.0" prefWidth="241.0" style="-fx-background-color: #FFF2D3; -fx-border-color: #584B33;">
+               <font>
+                  <Font name="Thonburi Bold" size="15.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="212.0" layoutY="167.0" prefHeight="26.0" prefWidth="241.0" style="-fx-background-color: #FFF2D3; -fx-border-color: #584B33;">
+               <font>
+                  <Font name="Thonburi Bold" size="15.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="212.0" layoutY="243.0" prefHeight="26.0" prefWidth="241.0" style="-fx-background-color: #FFF2D3; -fx-border-color: #584B33;">
+               <font>
+                  <Font name="Thonburi Bold" size="15.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="212.0" layoutY="280.0" prefHeight="26.0" prefWidth="241.0" style="-fx-background-color: #FFF2D3; -fx-border-color: #584B33;">
+               <font>
+                  <Font name="Thonburi Bold" size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="80.0" layoutY="360.0" text="RETURN FEE">
+               <font>
+                  <Font name="Thonburi Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="398.0" text="RETURNED?">
+               <font>
+                  <Font name="Thonburi Bold" size="19.0" />
+               </font>
+            </Label>
+            <PasswordField layoutX="212.0" layoutY="356.0" prefHeight="30.0" prefWidth="241.0" style="-fx-background-color: #FFF2D3; -fx-border-color: #584B33;">
+               <font>
+                  <Font name="Thonburi Bold" size="15.0" />
+               </font>
+            </PasswordField>
+            <PasswordField layoutX="212.0" layoutY="395.0" prefHeight="30.0" prefWidth="241.0" style="-fx-background-color: #FFF2D3; -fx-border-color: #584B33;">
+               <font>
+                  <Font name="Thonburi Bold" size="15.0" />
+               </font>
+            </PasswordField>
+            <Button layoutX="467.0" layoutY="129.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="78.0" style="-fx-background-color: #584B33;" text="SEARCH" textFill="#fff2d3">
+               <font>
+                  <Font name="Thonburi Bold" size="15.0" />
+               </font>
+            </Button>
+            <TextField layoutX="212.0" layoutY="205.0" prefHeight="26.0" prefWidth="241.0" style="-fx-background-color: #FFF2D3; -fx-border-color: #584B33;">
+               <font>
+                  <Font name="Thonburi Bold" size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="152.0" layoutY="208.0" text="ISBN">
+               <font>
+                  <Font name="Thonburi Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
