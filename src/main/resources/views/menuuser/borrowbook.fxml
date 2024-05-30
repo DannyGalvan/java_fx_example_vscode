@@ -26,7 +26,7 @@
                                     <Font name="Thonburi Bold" size="14.0" />
                                  </font>
                               </Button>
-                              <Button mnemonicParsing="false" style="-fx-background-color: #FFF2D3;" text="SEARCH BOOK">
+                              <Button mnemonicParsing="false" style="-fx-background-color: #FFF2D3;" text="SEARCH BOOK" onAction="#goToIndex">
                                  <font>
                                     <Font name="Thonburi Bold" size="14.0" />
                                  </font>

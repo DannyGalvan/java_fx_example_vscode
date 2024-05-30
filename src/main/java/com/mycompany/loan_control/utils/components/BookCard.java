@@ -16,8 +16,7 @@ public class BookCard extends AnchorPane {
   public BookCard(Image image, String bookName) {
       // Configurar la imagen del libro
       bookImageView = new ImageView(image);
-      bookImageView.setFitWidth(190);
-      bookImageView.setFitHeight(180);
+      bookImageView.setFitHeight(160);
       bookImageView.setPreserveRatio(true);
 
       AnchorPane.setTopAnchor(bookImageView, 0.0);

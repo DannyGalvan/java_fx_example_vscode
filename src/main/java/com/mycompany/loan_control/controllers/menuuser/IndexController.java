@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import com.google.inject.Inject;
+import com.mycompany.loan_control.App;
 import com.mycompany.loan_control.entities.Book;
 import com.mycompany.loan_control.entities.response.Response;
 import com.mycompany.loan_control.interfaces.impl.BookImpl;
@@ -107,6 +108,17 @@ public class IndexController implements Initializable {
       // Ejecutar el Task en un hilo separado
       Thread searchThread = new Thread(searchTask);
       searchThread.start();
-    }
+    } 
   }
+
+  @FXML
+  public void goToHistory() {    
+    App.view("history");
+  }
+
+  @FXML
+  public void goToBorrowBook() {    
+    App.view("borrowbook");
+  }
+
 }

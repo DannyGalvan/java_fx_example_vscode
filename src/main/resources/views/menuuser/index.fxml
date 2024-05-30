@@ -21,9 +21,30 @@
 
 <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pannable="true" prefHeight="750.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <content>
-      <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="750.0" prefWidth="950.0" spacing="10">
+      <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="750.0" prefWidth="950.0" spacing="10" style="-fx-background-color: #FFF2D3;">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="500.0" style="-fx-font-size: 20px;" text="Librería Mar y Tierra" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
+            <ToolBar prefHeight="45.0" prefWidth="857.0" style="-fx-background-color: #584B33;">
+              <items>
+                <Button mnemonicParsing="false" style="-fx-background-color: #FFF2D3;" text="MENU">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #FFF2D3;;" text="BORROW BOOK" onAction="#goToBorrowBook">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #FFF2D3;;" text="HISTORY" onAction="#goToHistory">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+              </items>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </ToolBar>
             <HBox alignment="CENTER">
                <children>
                   <TextField fx:id="searchField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="50.0" prefWidth="280.0" promptText="Buscar..." HBox.hgrow="ALWAYS">
@@ -49,7 +70,7 @@
                </VBox.margin></TilePane>
          </children>
          <padding>
-            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            <Insets bottom="30.0" />
          </padding>
       </VBox>
    </content>
