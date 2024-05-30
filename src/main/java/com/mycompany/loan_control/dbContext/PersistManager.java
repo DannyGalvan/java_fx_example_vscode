@@ -21,6 +21,10 @@ public class PersistManager {
     properties.setProperty("javax.persistence.jdbc.url", dotenv.get("DB_URL"));
     properties.setProperty("javax.persistence.jdbc.user", dotenv.get("DB_USER"));
     properties.setProperty("javax.persistence.jdbc.password", dotenv.get("BD_PASSWORD"));
+    properties.setProperty("hibernate.hbm2ddl.auto", dotenv.get("HIBERNATE_HBM2DDL_AUTO"));
+    properties.setProperty("hibernate.show_sql", dotenv.get("HIBERNATE_SHOW_SQL"));
+    properties.setProperty("hibernate.format_sql", dotenv.get("HIBERNATE_FORMAT_SQL"));
+    properties.setProperty("hibernate.connection.pool_size", dotenv.get("HIBERNATE_CONNECTION_POOL_SIZE"));
     emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME, properties);
   }
 

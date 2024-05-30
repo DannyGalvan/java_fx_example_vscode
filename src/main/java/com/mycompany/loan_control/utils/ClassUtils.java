@@ -14,14 +14,11 @@ public class ClassUtils {
 
   private static Set<Class<?>> findClasses(File directory, String packageName) throws ClassNotFoundException {
     Set<Class<?>> classes = new HashSet<>();
-    System.out.println("directory: " + directory.toPath().toString());
-    System.out.println("existes: " + directory.exists());
     if (!directory.exists()) {
       return classes;
     }
     File[] files = directory.listFiles();
     for (File file : files) {
-      System.out.println("file: " + file.toPath().toString());
       if (file.isDirectory()) {
         assert !file.getName().contains(".");
         classes.addAll(findClasses(file, packageName + "." + file.getName()));
