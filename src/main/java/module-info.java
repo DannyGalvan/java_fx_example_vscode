@@ -14,6 +14,7 @@ module com.mycompany.loan_control {
     requires java.fluent.validator;
     requires transitive com.google.guice;
     requires javax.inject;
+    requires io.github.classgraph;
 
     opens com.mycompany.loan_control.entities to org.hibernate.orm.core;
     exports com.mycompany.loan_control;

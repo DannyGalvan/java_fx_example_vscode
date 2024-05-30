@@ -2,7 +2,6 @@ package com.mycompany.loan_control;
 
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -29,14 +28,13 @@ public class App extends Application {
     private static final Map<String, Class<?>> controllerMap = new HashMap<>();
 
     @Override
-    public void init() throws Exception {
-        super.init();
-        // Escanea el paquete que contiene los controladores y agrega las clases de
-        // controladores al mapa de controladores.
-
-        Set<Class<?>> controllerClasses = new HashSet<>();
+    public void init()  {
         try {
-            controllerClasses = ClassUtils.getClasses(config.get("CONTROLLERS_PACKAGE"));
+            super.init();
+            // Escanea el paquete que contiene los controladores y agrega las clases de
+            // controladores al mapa de controladores.
+            Set<Class<?>> controllerClasses =  ClassUtils.getClasses(config.get("CONTROLLERS_PACKAGE"));;
+            
             for (Class<?> controllerClass : controllerClasses) {
                 if (controllerClass.getSimpleName().endsWith("Controller")) {
                     String packageName = controllerClass.getName();
@@ -50,7 +48,7 @@ public class App extends Application {
                     controllerMap.put(viewName, controllerClass);
                 }
             }
-        } catch (ClassNotFoundException | IOException e) {
+        } catch (Exception e) {
             System.out.println("Error al escanear los controladores: " + e.getMessage());
             System.out.println(e.getCause());
             System.exit(1);
